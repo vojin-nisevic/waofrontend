@@ -11,6 +11,10 @@ export class ElWarTeamService implements OnInit{
   constructor(private appService: AppService) { }
 
   ngOnInit(): void {
-    this.baseUrl = this.appService.getBaseUrl();
+    this.baseUrl = this.appService.getBaseUrl() + 'ewteam';
   }
+
+  //get all teams
+
+
 }
