@@ -3,6 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ComponentsModule } from './components/components.module';
+import { HTTP_INTERCEPTORS } from "@angular/common/http";
+import { AppInterceptor } from "./interceptors/app.interceptor";
+import { FormsModule } from "@angular/forms";
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -10,9 +16,13 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    ComponentsModule,
+    FormsModule,
+    MaterialModule,
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AppInterceptor, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
