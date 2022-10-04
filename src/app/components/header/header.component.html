@@ -1,1 +1,43 @@
-<p>header works!</p>
+<!--  <mat-toolbar color="primary">-->
+<!--    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">-->
+<!--      <mat-icon>menu</mat-icon>-->
+<!--    </button>-->
+<!--    <span>My App</span>-->
+<!--    <span class="example-spacer"></span>-->
+<!--<div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>-->
+<!--  <ul fxLayout fxLayoutGap="15px" class="navigation-items">-->
+<!--    <li>-->
+<!--      <a routerLink="/owner">Owner Actions</a>-->
+<!--    </li>-->
+<!--    <li>-->
+<!--      <a routerLink="/account">Account Actions</a>-->
+<!--    </li>-->
+<!--  </ul>-->
+<!--</div>-->
+<!--    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">-->
+<!--      <mat-icon>favorite</mat-icon>-->
+<!--    </button>-->
+<!--    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">-->
+<!--      <mat-icon>share</mat-icon>-->
+<!--    </button>-->
+<!--  </mat-toolbar>-->
+
+<mat-toolbar color = "accent">
+  <ul class="header gap">
+    <li>Members
+    </li>
+    <li class="header gap" routerLink="/el-war-team">EW teams
+    </li>
+    <li class="header gap" [matMenuTriggerFor]="menu">
+      Menu<span class="material-icons">arrow_drop_down</span>
+<!--      <button mat-button [matMenuTriggerFor]="menu">Menu</button>-->
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item >Item 1</button>
+        <button mat-menu-item >Item 2</button>
+      </mat-menu>
+    </li>
+
+  </ul>
+  <span class = "filler"></span>
+  <span>About</span>
+</mat-toolbar>
