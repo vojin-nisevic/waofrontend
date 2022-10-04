@@ -14,7 +14,4 @@ export class ElWarTeamService implements OnInit{
     this.baseUrl = this.appService.getBaseUrl() + 'ewteam';
   }
 
-  //get all teams
-
-
 }
