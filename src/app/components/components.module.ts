@@ -6,13 +6,15 @@ import { MatIconModule } from "@angular/material/icon";
 import { RouterLink } from "@angular/router";
 import { ElWarTeamsComponent } from './el-war-teams/el-war-teams.component';
 import { MatMenuModule } from "@angular/material/menu";
+import { ElWarTeamDetailsComponent } from './el-war-team-details/el-war-team-details.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    ElWarTeamsComponent
+    ElWarTeamsComponent,
+    ElWarTeamDetailsComponent
   ],
   exports: [
     HeaderComponent

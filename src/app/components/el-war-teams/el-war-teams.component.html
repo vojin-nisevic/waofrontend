@@ -1,1 +1,8 @@
 <p>el-war-teams works!</p>
+<div *ngIf="teams">
+  <ul *ngFor="let team of teams; let i = index">
+    <li (click)="fetchTeamById(team.id)" style="cursor: pointer">{{team.name}}</li>
+  </ul>
+</div>
+<hr>
+<app-el-war-team-details *ngIf="showDetails" [team]="team"></app-el-war-team-details>
